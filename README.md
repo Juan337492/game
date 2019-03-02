@@ -1,1 +1,1 @@
-# game
+# JavaScript Game
