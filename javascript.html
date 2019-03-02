@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
+  <title>JavaScript Game</title>
 </head>
 <body>
   <script>
 
+function computerPlay(playerSelection, computerSelection){
+let scorePlayer = 0;
+let scoreComputer = 0;
+playerInput = playerSelection.toUpperCase();
+computerInput = computerSelection.toUpperCase();
+if (playerInput ==='ROCK' && computerInput ==='PAPER'){
+	scoreComputer = scoreComputer + 1;
+return "computer wins";
+}else if(playerInput ==='ROCK' && computerInput === 'SCISSORS'){
+ 	scorePlayer = scorePlayer + 1;
+return "player wins";
+}else (playerInput ==='ROCK' && computerInput === 'ROCK')
+return "tie";
+
+}
+function randomInput(){
+	let num1 = 'rock';
+	let num2 = 'paper';
+	let num3 = 'scissors';
+const computerRandomInput = 'num' + Math.floor(Math.random() * 3 + 1 );
+console.log(computerRandomInput);
+if (computerRandomInput === 'num1' ){
+	return "rock";
+}else if (computerRandomInput === 'num2'){
+	return "paper";
+}else (computerRandomInput === 'num3')
+	return "scissors";
+
+}
+
+console.log(computerPlay('rock' , randomInput()));
+
   </script>
+
 </body>
 </html>
