@@ -2,8 +2,17 @@
 <html>
 <head>
   <title>JavaScript Game</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+<h1 id="gameName">Rock, Paper , Scissors</h1>
+<div class="wrapper">
+	<div class="btn">
+	<button id="btn1">Player</button>
+	<button id="btn2">Computer</button>
+	<button id="btn3">Click Me!</button>
+	</div>
+</div>
   <script>
 
 function computerPlay(playerSelection, computerSelection){
@@ -19,8 +28,8 @@ return "computer wins";
 return "player wins";
 }else (playerInput ==='ROCK' && computerInput === 'ROCK')
 return "tie";
-
 }
+
 function randomInput(){
 	let num1 = 'rock';
 	let num2 = 'paper';
@@ -33,10 +42,11 @@ if (computerRandomInput === 'num1' ){
 	return "paper";
 }else (computerRandomInput === 'num3')
 	return "scissors";
-
 }
 
-console.log(computerPlay('rock' , randomInput()));
+document.getElementById("btn3").addEventListener("click", function(){
+document.getElementById("btn3").innerHTML = computerPlay('rock' , randomInput());
+});
 
   </script>
 
